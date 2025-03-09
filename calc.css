@@ -1,0 +1,84 @@
+.frame{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+
+    margin: auto;
+    margin-top: 100px;
+    align-self: center;
+
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    
+
+    display: grid;
+    grid-template-rows: 130px 1fr;
+}
+
+.display{
+    background-color: rgb(235, 235, 235);
+    backdrop-filter: blur(10px);
+    
+    outline: 2px solid rgba(0, 0, 0, 0.142);
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px;
+}
+
+.keys{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;   
+    gap: 10px;
+    margin: 10px;
+}
+
+button{
+    width: 80px;
+    height: 55px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    border:none;
+    transition: 0.1s;
+    font-size: 16px;
+}
+button:hover{
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.8);
+}
+button:active{
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    width: 75px;
+    height: 50px;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+}
+
+.c1, .c2, .c3{
+    background-color: #896deb;
+}
+
+.r5{
+    background-color: hsl(259, 100%, 80%);
+}
+.c4{
+    background-color: hsl(259, 100%, 80%);
+}
+
+input{
+    height:45px;
+    width:350px;
+    font-size: 20px;
+    text-align: right;
+    background-color: inherit;
+    border: none;
+    cursor: default;
+    background: transparent;
+}
+input:focus,input:active{
+      outline: none; 
+      border: none;
+      box-shadow: none;
+    }
