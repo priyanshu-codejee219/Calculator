@@ -7,38 +7,76 @@
     
 </head>
 <body style="background-color: 	#d0baff;">
-    <div class="frame">
-        <div class="display">
-            <input type="text" style="height:30px; font-size: 20px;" id="eqn"><br>
-            <input type="text" style="height:60px; font-size: 40px;" id="field">
+    <div class="everything">
+        <div class="leftPanel">
+            <div class="leftContent">Additional Functions</div>
+            <div class="scroll-box">
+                <button onclick="appendValue('sin(')">Sine (sin)</button>
+                <button onclick="appendValue('cos(')">Cosine (cos)</button>
+                <button onclick="appendValue('tan(')">Tangent (tan)</button>
+                <button onclick="appendValue('asin(')">Arcsine (asin)</button>
+                <button onclick="appendValue('acos(')">Arccosine (acos)</button>
+                <button onclick="appendValue('atan(')">Arctangent (atan)</button>
+                <button onclick="appendValue('sinh(')">Hyperbolic Sine (sinh)</button>
+                <button onclick="appendValue('cosh(')">Hyperbolic Cosine (cosh)</button>
+                <button onclick="appendValue('tanh(')">Hyperbolic Tangent (tanh)</button>
+                <button onclick="appendValue('log(')">Logarithm (log)</button>
+                <button onclick="appendValue('ln(')">Natural Log (ln)</button>
+                <button onclick="appendValue('sqrt(')">Square Root (√)</button>
+                <button onclick="appendValue('pow(')">Exponent (pow)</button>
+                <button onclick="appendValue('abs(')">Absolute Value (|x|)</button>
+                <button onclick="appendValue('floor(')">Floor (⌊x⌋)</button>
+                <button onclick="appendValue('ceil(')">Ceiling (⌈x⌉)</button>
+                <button onclick="appendValue('round(')">Round</button>
+                <button onclick="appendValue('exp(')">Exponent (e^x)</button>
+                <button onclick="appendValue('pi')">Pi (π)</button>
+                <button onclick="appendValue('e')">Euler's Number (e)</button>
+
+            </div>
         </div>
-        <div class="keys">
-            <button class="r1 c1" onclick="appendValue('1')">1</button>
-            <button class="r1 c2" onclick="appendValue('2')">2</button>
-            <button class="r1 c3" onclick="appendValue('3')">3</button>
-            <button class="r1 c4" onclick="appendValue('/')">&divide;</button>
 
-            <button class="r2 c1" onclick="appendValue('4')">4</button>
-            <button class="r2 c2" onclick="appendValue('5')">5</button>
-            <button class="r2 c3" onclick="appendValue('6')">6</button>
-            <button class="r2 c4" onclick="appendValue('*')">&times;</button>
+        <div class="frame">
+            <button class="toggleRight" onclick="toggleRightPanel()">&#9654;</button>
+            <button class="toggleLeft" onclick="toggleLeftPanel()">&#9664;</button>
+            <div class="display">
+                <input type="text" style="height:30px; font-size: 20px;" id="eqn"><br>
+                <input type="text" style="height:60px; font-size: 40px;" id="field">
+            </div>
+            <div class="keys">
+                <button class="r1 c1" onclick="appendValue('1')">1</button>
+                <button class="r1 c2" onclick="appendValue('2')">2</button>
+                <button class="r1 c3" onclick="appendValue('3')">3</button>
+                <button class="r1 c4" onclick="appendValue('/')">&divide;</button>
+    
+                <button class="r2 c1" onclick="appendValue('4')">4</button>
+                <button class="r2 c2" onclick="appendValue('5')">5</button>
+                <button class="r2 c3" onclick="appendValue('6')">6</button>
+                <button class="r2 c4" onclick="appendValue('*')">&times;</button>
+    
+                <button class="r3 c1" onclick="appendValue('7')">7</button>
+                <button class="r3 c2" onclick="appendValue('8')">8</button>
+                <button class="r3 c3" onclick="appendValue('9')">9</button>
+                <button class="r3 c4" onclick="appendValue('-')">-</button>
+    
+                <button class="r4 c1" onclick="appendValue('.')">.</button>
+                <button class="r4 c2" onclick="appendValue('0')">0</button>
+                <button class="r4 c3" onclick="backspace()">C</button>
+                <button class="r4 c4" onclick="appendValue('+')">+</button>
+    
+                <button class="r5 c1" onclick="appendValue('(')">(</button>
+                <button class="r5 c2" onclick="appendValue(')')">)</button>
+                <button class="r5 c3" onclick="clearAll()">AC</button>
+                <button class="r5 c4" onclick="calculate()">=</button>
+            </div>
+        </div>
 
-            <button class="r3 c1" onclick="appendValue('7')">7</button>
-            <button class="r3 c2" onclick="appendValue('8')">8</button>
-            <button class="r3 c3" onclick="appendValue('9')">9</button>
-            <button class="r3 c4" onclick="appendValue('-')">-</button>
-
-            <button class="r4 c1" onclick="appendValue('.')">.</button>
-            <button class="r4 c2" onclick="appendValue('0')">0</button>
-            <button class="r4 c3" onclick="backspace()">C</button>
-            <button class="r4 c4" onclick="appendValue('+')">+</button>
-
-            <button class="r5 c1" onclick="appendValue('(')">(</button>
-            <button class="r5 c2" onclick="appendValue(')')">)</button>
-            <button class="r5 c3" onclick="clearAll()">AC</button>
-            <button class="r5 c4" onclick="calculate()">=</button>
+        <div class="rightPanel">
+            <div class="rightContent">History</div>
+            <textarea id="memory" rows="10" cols="30" readonly></textarea>
+            <button id="del" onclick="del()">Delete History</button>
         </div>
     </div>
+    
     <script src="calc.js"></script>
 </body>
 </html>
